@@ -1,0 +1,22 @@
+{
+  "name": "cursed-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Naomi Paulmin (codebynao)",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "^0.15.0",
+    "@discordjs/rest": "^0.5.0",
+    "discord-api-types": "^0.35.0",
+    "discord.js": "^13.8.1",
+    "dotenv": "^16.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.18.0"
+  },
+  "description": ""
+}
