@@ -22,21 +22,23 @@ module.exports = {
     }
 
     if (newMember.streaming && !oldMember.streaming) {
-      const channel = client.channels.cache.get('982547441385635911')
+      const channel = client.channels.cache.get(
+        process.env.STREAM_NOTIF_CHANNEL
+      )
       if (!channel) {
         return
       }
-      let message = `Looks like someone is streaming in <#${newMember.channelId}>`
+      let message = `👀 Someone is streaming in VC, come lurk! 👀`
 
-      const peepo = client.emojis.cache.find(
-        (emoji) => emoji.name === 'excitedCat'
-      )
+      // const peepo = client.emojis.cache.find(
+      //   (emoji) => emoji.name === 'excitedCat'
+      // )
 
-      console.log(' client.emojis.cache', client.emojis.cache, peepo)
+      // console.log(' client.emojis.cache', client.emojis.cache, peepo)
 
-      if (peepo) {
-        message += ` ${peepo}`
-      }
+      // if (peepo) {
+      //   message += ` ${peepo}`
+      // }
       channel.send(message)
     }
 
